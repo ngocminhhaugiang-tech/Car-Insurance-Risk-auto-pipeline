@@ -8,16 +8,16 @@ Trong ngành bảo hiểm, việc chuyển đổi từ thẩm định thủ côn
 
 ### 🔍 Phát Hiện Kiểm Toán Dữ Liệu (Key Data Insights)
 1. **Lỗi Ngữ Nghĩa Toàn Vẹn (Semantic Errors):** 
-   * Quá trình EDA phát hiện giá trị nhỏ nhất (min) của hai đặc trưng `ANNUAL_MILEAGE` (Số dặm đi hàng năm) và `PAST_ACCIDENTS` (Số vụ tai nạn) lần lượt là `-140,000` và `-5`[cite: 4]. Đây là các giá trị âm không hợp lệ về mặt bản chất nghiệp vụ[cite: 4].
+   * Quá trình EDA phát hiện giá trị nhỏ nhất (min) của hai đặc trưng `ANNUAL_MILEAGE` (Số dặm đi hàng năm) và `PAST_ACCIDENTS` (Số vụ tai nạn) lần lượt là `-140,000` và `-5`. Đây là các giá trị âm không hợp lệ về mặt bản chất nghiệp vụ.
 2. **Hiện Tượng Sự Kiện Hiếm (Rare Events Distribution):**
-   * Các biến lịch sử vi phạm (`SPEEDING_VIOLATIONS`, `DUIS`, `PAST_ACCIDENTS`) có độ lệch dương cực mạnh (Positive Skewness lên tới 5.6)[cite: 4]. Phần lớn khách hàng có giá trị bằng 0, tạo thành một đuôi dài đại diện cho nhóm nhỏ khách hàng có rủi ro siêu cao[cite: 4].
+   * Các biến lịch sử vi phạm (`SPEEDING_VIOLATIONS`, `DUIS`, `PAST_ACCIDENTS`) có độ lệch dương cực mạnh (Positive Skewness lên tới 5.6). Phần lớn khách hàng có giá trị bằng 0, tạo thành một đuôi dài đại diện cho nhóm nhỏ khách hàng có rủi ro siêu cao.
 3. **Mất Đồng Nhất Định Dạng (Categorical Inconsistency):**
-   * Phát hiện lỗi không nhất quán chữ hoa/chữ thường nghiêm trọng ở biến trình độ học vấn (ví dụ: 'University' bên cạnh 'university') và biến giới tính, gây nhiễu cho thuật toán phân loại nếu không được chuẩn hóa[cite: 4].
+   * Phát hiện lỗi không nhất quán chữ hoa/chữ thường nghiêm trọng ở biến trình độ học vấn (ví dụ: 'University' bên cạnh 'university') và biến giới tính, gây nhiễu cho thuật toán phân loại nếu không được chuẩn hóa.
 
 ### 🛠️ Kiến Trúc Hệ Thống & Công Nghệ
-* **Ngôn ngữ & Thư viện:** Python (Pandas, NumPy, Scikit-Learn, FuzzyWuzzy, Joblib)[cite: 4].
-* **Mô hình thử nghiệm:** Hồi quy Logistic, SVM, KNN, Cây quyết định, Rừng ngẫu nhiên (Random Forest), XGBoost[cite: 4].
-* **Kỹ thuật cốt lõi:** Trích xuất đặc trưng tương tác (Interaction Features), Lựa chọn đặc trưng tự động (RFE), và Kiểm thử chéo 3-Fold Cross-Validation[cite: 4].
+* **Ngôn ngữ & Thư viện:** Python (Pandas, NumPy, Scikit-Learn, FuzzyWuzzy, Joblib).
+* **Mô hình thử nghiệm:** Hồi quy Logistic, SVM, KNN, Cây quyết định, Rừng ngẫu nhiên (Random Forest), XGBoost.
+* **Kỹ thuật cốt lõi:** Trích xuất đặc trưng tương tác (Interaction Features), Lựa chọn đặc trưng tự động (RFE), và Kiểm thử chéo 3-Fold Cross-Validation.
 
 ### 📁 Cấu Trúc Kho Lưu Trữ (Repository Structure)
 ```text
@@ -40,6 +40,5 @@ car-insurance-risk-pipeline/
 │
 ├── main.py                         <- Điểm khởi đầu khởi chạy (Entry Point) toàn bộ hệ thống pipeline
 ├── config.py                       <- File lưu trữ các tham số cấu hình hệ thống tập trung
-│ 4]
 │   └── plots/                      <- Thư mục lưu trữ biểu đồ Confusion Matrix và ROC Curve (.png)[cite: 4]
 └── README.md                       <- Tài liệu hướng dẫn hệ thống
