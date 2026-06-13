@@ -1,4 +1,4 @@
-# Hệ Thống Đường Ống Tự Động Hóa & Phân Loại Rủi Ro Thẩm Định Bảo Hiểm Xe
+# Car Insurance Risk Classification & Automated Data Integrity Pipeline
 
 ### 📌 Tổng Quan Dự Án
 Dự án  xây dựng một hệ thống đường ống tự động (Data Pipeline) khép kín, từ khâu tiền xử lý dữ liệu đến huấn luyện mô hình học máy. Mục tiêu cốt lõi là giải quyết bài toán phân loại nhị phân để hỗ trợ ra quyết định thẩm định bảo hiểm xe cơ giới tự động (`OUTCOME`: 1 - Chấp nhận, 0 - Từ chối) dựa trên hồ sơ rủi ro lái xe, nhân khẩu học và thông tin phương tiện của 105,017 khách hàng.
